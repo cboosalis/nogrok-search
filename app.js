@@ -1,36 +1,28 @@
 const input = document.getElementById("q");
 const form = document.getElementById("searchForm");
 
-const blocked =
-  "-site:grokipedia.com -site:www.grokipedia.com -inurl:grokipedia -intitle:grokipedia";
+const blocked = "-site:grokipedia.com -site:www.grokipedia.com -inurl:grokipedia -intitle:grokipedia";
 
-function search(query) {
+function goToGoogle(query) {
   query = query.trim();
   if (!query) return;
 
   const fullQuery = `${query} ${blocked}`;
+  const googleUrl = "https://www.google.com/search?q=" + encodeURIComponent(fullQuery);
 
-  window.location.href =
-    "https://www.google.com/search?q=" +
-    encodeURIComponent(fullQuery);
+  window.location.replace(googleUrl);
 }
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  search(input.value);
+const params = new URLSearchParams(window.location.search);
+const queryFromUrl = params.get("q");
+
+if (queryFromUrl) {
+  goToGoogle(queryFromUrl);
+}
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  goToGoogle(input.value);
 });
 
-// If someone opens the app with ?q=something,
-// immediately redirect to Google.
-const params = new URLSearchParams(window.location.search);
-const q = params.get("q");
-
-if (q) {
-  search(q);
-} else {
-  setTimeout(() => input.focus(), 250);
-}
-
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
-}
+setTimeout(() => input.focus(), 250);
