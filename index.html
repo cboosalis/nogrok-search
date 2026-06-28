@@ -1,28 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>No Grok Search</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
+    <title>No Grok Search</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
 
 <div class="container">
-    <img src="icon-192.png" class="logo" alt="No Grok Search">
+
+    <img
+        src="icon-192.png"
+        class="logo"
+        alt="No Grok Search">
 
     <h1>No Grok Search</h1>
 
-    <form id="searchForm">
-        <input
-            id="q"
-            type="text"
-            placeholder="Search Google..."
-            autocomplete="off">
+    <form id="searchForm" autocomplete="off">
+
+        <div class="searchBox">
+
+            <span class="searchIcon">
+                🔍
+            </span>
+
+            <input
+                id="q"
+                type="search"
+                placeholder="Search Google..."
+                spellcheck="false"
+                autocomplete="off"
+                autocapitalize="off"
+                autofocus>
+
+        </div>
+
+        <div class="buttons">
+
+            <button type="submit">
+                Google Search
+            </button>
+
+        </div>
+
     </form>
+
+    <div id="recentSearches"></div>
+
 </div>
 
 <script src="app.js"></script>
