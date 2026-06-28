@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>No Grok Search</title>
-
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="style.css">
-
-    <meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Grok Search</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-<div class="container">
-
-    <img
-        src="icon-192.png"
-        class="logo"
-        alt="No Grok Search">
+  <div class="container">
+    <img src="icon-192.png" class="logo" alt="No Grok Search">
 
     <h1>No Grok Search</h1>
 
-    <form id="searchForm" autocomplete="off">
+    <form id="searchForm">
+      <div class="searchBox">
+        <span class="searchIcon">🔍</span>
+        <input id="q" type="search" placeholder="Search Google..." autofocus>
+      </div>
 
-        <div class="searchBox">
-
-            <span class="searchIcon">
-                🔍
-            </span>
-
-            <input
-                id="q"
-                type="search"
-                placeholder="Search Google..."
-                spellcheck="false"
-                autocomplete="off"
-                autocapitalize="off"
-                autofocus>
-
-        </div>
-
-        <div class="buttons">
-
-            <button type="submit">
-                Google Search
-            </button>
-
-        </div>
-
+      <div class="buttons">
+        <button type="submit">Google Search</button>
+      </div>
     </form>
+  </div>
 
-</div>
+  <script>
+    const blocked = "-site:grokipedia.com -site:www.grokipedia.com -inurl:grokipedia -intitle:grokipedia";
 
-<script src="app.js"></script>
+    function searchGoogle(query) {
+      query = query.trim();
+      if (!query) return;
 
+      const fullQuery = query + " " + blocked;
+      const url = "https://www.google.com/search?q=" + encodeURIComponent(fullQuery);
+
+      window.location.href = url;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("q");
+
+    if (q) {
+      searchGoogle(q);
+    }
+
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      searchGoogle(document.getElementById("q").value);
+    });
+  </script>
 </body>
 </html>
