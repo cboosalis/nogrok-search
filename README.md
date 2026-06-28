@@ -1,7 +1,7 @@
 # No GroKKK Search
 ### Search Google without GroKKK.
 
-Welcome to **[No Grok Googles Search](https://cboosalis.github.io/nogrok-search/)**.
+Welcome to **[No Grok Googles Search](https://cboosalis.github.io/nogrok-search/)** (Goes to https://cboosalis.github.io/nogrok-search/).
 
 I did not like getting GroKKK results in my Google searches, so I asked ChatGPT for help.
 
