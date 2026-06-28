@@ -1,6 +1,7 @@
 const input = document.getElementById("q");
 const form = document.getElementById("searchForm");
 const recentBox = document.getElementById("recentSearches");
+const CACHE_NAME = "no-grok-search-v5";
 
 const blocked = "-site:grokipedia.com -site:www.grokipedia.com -inurl:grokipedia -intitle:grokipedia";
 
