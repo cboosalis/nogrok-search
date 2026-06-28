@@ -12,4 +12,11 @@ document.getElementById("searchForm").addEventListener("submit", function (e) {
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js");
+
+  const params = new URLSearchParams(window.location.search);
+const urlQuery = params.get("q");
+
+if (urlQuery) {
+  search(urlQuery);
+}
 }
