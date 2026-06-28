@@ -1,4 +1,4 @@
-# No Grok Search
+# No GroKKK Search: Exclude GroKKK from your Google Search Results
 
 Welcome to **[No Grok Googles Search](https://cboosalis.github.io/nogrok-search/)**.
 
