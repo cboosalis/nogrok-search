@@ -89,3 +89,8 @@ input:focus {
     border-color: #5f6368;
   }
 }
+
+html, body {
+  background: #202124 !important;
+  color: #e8eaed !important;
+}
