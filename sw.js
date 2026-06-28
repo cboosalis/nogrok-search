@@ -1,4 +1,4 @@
-const CACHE_NAME = "no-grok-search-v7";
+const CACHE_NAME = "no-grok-search-v8";
 
 const FILES_TO_CACHE = [
   "./",
