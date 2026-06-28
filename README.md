@@ -4,6 +4,8 @@ Welcome to **[No Grok Googles Search](https://cboosalis.github.io/nogrok-search/
 
 I did not like getting GroKKK results in my Google searches, so I asked ChatGPT for help.
 
+The link will automatically exclude GroKKK from your search results in Google. Yes, Google is still the search engine, but this search page simply excludes GroKKK from the search results. It does not to anything else. 
+
 ChatGPT wrote the code for each of the files in this repository. My role was mostly to copy, paste, test, and report what was broken. There were quite a few little issues along the way—JavaScript bugs, service worker caching, GitHub Pages quirks, Android behavior, and CSS problems—but each time I reported the problem, ChatGPT diagnosed it and suggested a fix until everything worked.
 
 In other words, this project was less about me writing code and more about me directing the project and debugging it with an AI pair programmer.
