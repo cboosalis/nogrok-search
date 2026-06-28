@@ -1,6 +1,6 @@
 # No Grok Search
 
-Welcome to https://cboosalis.github.io/nogrok-search/
+Welcome to **[No Grok Search](https://cboosalis.github.io/nogrok-search/)** (opens in your browser).
 
 I did not like getting GroKKK results in my Google searches, so I asked ChatGPT for help.
 
