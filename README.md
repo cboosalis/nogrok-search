@@ -1,9 +1,9 @@
 # No GroKKK Search
 ### Search Google without GroKKK.
 
-Welcome to **[No Grok Googles Search](https://cboosalis.github.io/nogrok-search/)** (Goes to https://cboosalis.github.io/nogrok-search/).
+Welcome to **[No Grok Googles Search](https://cboosalis.github.io/nogrok-search/)** 
 
-I did not like getting GroKKK results in my Google searches, so I asked ChatGPT for help.
+I did not like getting GroKKK results in my Google searches, so I asked ChatGPT for help. It created https://cboosalis.github.io/nogrok-search/ for me (same as above). 
 
 The link will automatically exclude GroKKK from your search results in Google. Yes, Google is still the search engine, but this search page simply excludes GroKKK from the search results. It does not to anything else. 
 
