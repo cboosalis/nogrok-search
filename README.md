@@ -1,5 +1,7 @@
 # No Grok Search
 
+Welcome to https://cboosalis.github.io/nogrok-search/
+
 I did not like getting GroKKK results in my Google searches, so I asked ChatGPT for help.
 
 ChatGPT wrote the code for each of the files in this repository. My role was mostly to copy, paste, test, and report what was broken. There were quite a few little issues along the way—JavaScript bugs, service worker caching, GitHub Pages quirks, Android behavior, and CSS problems—but each time I reported the problem, ChatGPT diagnosed it and suggested a fix until everything worked.
